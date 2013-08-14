@@ -1,4 +1,3 @@
-
 <?php
 require("twitteroauth/twitteroauth.php");  
 session_start();
@@ -12,7 +11,7 @@ if(!empty($_GET['oauth_verifier']) && !empty($_SESSION['oauth_token']) && !empty
 }  
 
 // TwitterOAuth instance, with two new parameters we got in twitter_login.php  
-$twitteroauth = new TwitterOAuth('CcIKBvSg5r52tffzw3BLw', 'gsQOicw91uqOFyKdeWHlaYRS9Brkz4a4wTTCnHhXZw', $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);  
+$twitteroauth = new TwitterOAuth('Consumer key', 'Consumer Secret key', $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);  
 // Let's request the access token  
 $access_token = $twitteroauth->getAccessToken($_GET['oauth_verifier']); 
 // Save it in a session var 
