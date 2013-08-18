@@ -1,4 +1,3 @@
-
 <?php
 if (isset($_POST)) {
 
@@ -10,7 +9,7 @@ if (isset($_POST)) {
 	session_start();
 
 	// The TwitterOAuth instance  
-	$twitteroauth = new TwitterOAuth('CcIKBvSg5r52tffzw3BLw', 'gsQOicw91uqOFyKdeWHlaYRS9Brkz4a4wTTCnHhXZw');  
+	$twitteroauth = new TwitterOAuth('Consumer key', 'Consumenr secret key');  
 	// Requesting authentication tokens, the parameter is the URL we will be redirected to  
 	$request_token = $twitteroauth->getRequestToken('http://localhost/twitter/twitter_oauth.php');  
 	  
